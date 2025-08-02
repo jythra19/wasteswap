@@ -186,7 +186,7 @@ class ReUseHubAPITester:
     def test_invalid_endpoints(self):
         """Test invalid endpoints return proper errors"""
         tests = [
-            ("Non-existent Item", "GET", "api/items/non-existent-id", 404),
+            ("Non-existent Item", "GET", "api/items/non-existent-id", 404, None),
             ("Invalid Item Creation", "POST", "api/items", 422, {"title": ""}),  # Missing required fields
         ]
         
